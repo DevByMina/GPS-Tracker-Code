@@ -13,7 +13,7 @@ int main(){
 	SWs_Init();
 	UART_Init();
 	while(1){
-		set_led();
-		clear_led();
+		check_DestinationSet();
+		check_DestinationClear();
 	}
 }
