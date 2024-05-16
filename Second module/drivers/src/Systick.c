@@ -1,6 +1,6 @@
 //Mina Sameh
 
-#include "Systick.h"
+#include "../headers/Systick.h"
 
 void systic_init(void){
 	NVIC_ST_CTRL_R &=0;									// disbale timer
