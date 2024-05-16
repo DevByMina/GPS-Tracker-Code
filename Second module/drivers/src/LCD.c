@@ -1,4 +1,4 @@
-//Khaled Mohamed & Youssef
+//Khaled Mohamed & Mina
 
 #include "../headers/LCD.h"
 
