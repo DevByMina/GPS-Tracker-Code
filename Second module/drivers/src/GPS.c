@@ -1,6 +1,6 @@
 //Ahmed Khedr
 
-#include "GPS.h"
+#include "../headers/GPS.h"
 
 char contents[7][20]={'\0'};
 extern float prevlat;
