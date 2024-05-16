@@ -3,14 +3,14 @@
 #include "tm4c123gh6pm.h"
 #include <stdio.h>
 #include <stdint.h>
-#include "GPS.h"
-#include "UART.h"
-#include "RGB.h"
-#include "Systick.h"
-#include "LCD.h" 
-#include "Switches.h"
-#include "EEPROM.h"
-#include "Interrupts.h"
+#include "drivers/headers/GPS.h"
+#include "drivers/headers/UART.h"
+#include "drivers/headers/RGB.h"
+#include "drivers/headers/Systick.h"
+#include "drivers/headers/LCD.h" 
+#include "drivers/headers/Switches.h"
+#include "drivers/headers/EEPROM.h"
+#include "drivers/headers/Interrupts.h"
 
 
 float prevlat;
@@ -36,16 +36,16 @@ int main() {
 	EEPROM_Init();
 	
 	LCD_WriteString("Please wait...");
-	LCD4bits_Cmd(0xC0);													//to begin at 2nd line
+	LCD4bits_Cmd(0xC0);					//to begin at 2nd line
 	LCD_WriteString("initializing GPS");
 	
 	lineparsing();
-	LCD4bits_Cmd(0x01);													//Clear LCD display
-	LCD4bits_Cmd(0x80);													//to begin at 1st line
+	LCD4bits_Cmd(0x01);					//Clear LCD display
+	LCD4bits_Cmd(0x80);					//to begin at 1st line
 	LCD_WriteString(" click to start ");
 
-	while(s2_read()==0x01);											//Press Switch 2 to start
-	lineparsing();															//get first point from GPS
+	while(s2_read()==0x01);					//Press Switch 2 to start
+	lineparsing();						//get first point from GPS
 	sprintf(LCD_String,"total distance :");
 	LCD4bits_Cmd(0x80);  
 	LCD_WriteString(LCD_String);
