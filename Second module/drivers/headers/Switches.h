@@ -1,4 +1,4 @@
-//Ramez Emad
+//John Emile
 
 #ifndef Switches_h
 #define Switches_h
