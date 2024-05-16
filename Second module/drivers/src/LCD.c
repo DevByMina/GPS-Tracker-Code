@@ -1,6 +1,6 @@
 //Khaled Mohamed & Youssef
 
-#include "LCD.h"
+#include "../headers/LCD.h"
 
 void LCD4bits_Init(void){
 	SYSCTL_RCGCGPIO_R |= 0x02;   //enable clock for PORTB
