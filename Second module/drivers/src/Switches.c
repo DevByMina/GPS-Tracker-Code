@@ -1,6 +1,6 @@
 //John Emile
 
-#include "Switches.h"
+#include "../headers/Switches.h"
 
 void Switches_init(void){
 	SYSCTL_RCGCGPIO_R|=0x20;
