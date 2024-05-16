@@ -1,6 +1,6 @@
 //John Shoukry
 
-#include "EEPROM.h"
+#include "../headers/EEPROM.h"
 
 uint32_t block = 0;
 uint32_t offset =2;
