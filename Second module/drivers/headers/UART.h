@@ -4,7 +4,7 @@
 #define UART_h
 
 #include "tm4c123gh6pm.h"
-#include "EEPROM.h"
+#include "drivers/headers/EEPROM.h"
 extern uint32_t block;
 extern uint32_t offset;
 void init_UART0(void);
