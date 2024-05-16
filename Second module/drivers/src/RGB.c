@@ -1,6 +1,6 @@
 //John Emile
 
-#include "RGB.h"
+#include "../headers/RGB.h"
 
 void RGB_init(void){
     SYSCTL_RCGCGPIO_R |= 0x20;
